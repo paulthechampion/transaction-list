@@ -10,7 +10,7 @@ each customer per month and total.
 
 
 
-I built this App using create-react-app, You add your transactions youself its quick and easy to understand. I originally wanted to make this App a full stack app, bu=y having a backend folder and using "express" to create an API and mongodb to create a database schema so I can send data to the front end and reciceve using react and redux but decided to store all my date in localhost for the purpose of this assignment
+I built this App using create-react-app, You add your transactions youself its quick and easy to understand. I originally wanted to make this App a full stack app, by having a backend folder and using "express" to create an API and mongodb to create a database schema so I can store data properly and send data to the frontend, reciceving and displaying using react and redux, but decided to store all my data in localhost for the purpose of this assignment
 
 I have a file called transactonList in my assest folder where I create the transcation class and some methods needed to complete this assignmenet in the class
 
