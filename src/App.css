@@ -80,6 +80,11 @@ header > nav > ul > li > a:hover {
 	cursor: pointer;
 }
 
+header > nav > ul > li > a:focus {
+	
+	color: red;
+}
+
 footer {
 
 	margin-top: auto;
