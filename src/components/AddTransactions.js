@@ -49,7 +49,7 @@ export default function AddTransactions() {
 					</div>
 					<div>
 						<input type="text" onChange={onChange} name="product" placeholder="Enter Product name" required/> <br/>
-						<input type="date" onChange={onChange} name="date"value={todaysDate} max={todaysDate} placeholder="yyyy-mm-dd" required/> 
+						<input type="date" onChange={onChange} name="date" max={todaysDate} placeholder="yyyy-mm-dd" required/> 
 						<input type="number" onChange={onChange} name="price" placeholder="Enter Price" required/> <br/>
 						<textarea placeholder="Describe your product (not required)" onChange={onChange} name="description">
 
