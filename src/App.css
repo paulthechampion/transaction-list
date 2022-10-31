@@ -185,6 +185,9 @@ input[ type=date ] {
 	width: 15em;
 	padding: .5em;
 	border-radius: 5px;
+	-webkit-appearance: textfield;
+	-moz-appearance: textfield;
+	min-height: .5em;
 }
 
 input[ type=number ] {
