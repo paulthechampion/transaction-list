@@ -1,38 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html {
+
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+
+	background-image: url("./assets/money.jpg");
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	margin: 0 0 4em;
+}
+
+header {
+
+	background-color: rgb(133, 187, 53);
+	margin-bottom: 2.5em;
+	height: 4em;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	padding-top: 1em;
+}
+
+header > nav {
+
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	background-color: white;
+	width:85%;
+	padding: 1em;
+	height: 1em;
+}
+
+header > nav > div {
+
+	text-align: left;
+	width: 50%;
+	margin-left: 3em;
+}
+
+header > nav > div > img {
+
+	width: 2.5em;
+	height: 2.5em;
+	position: relative;
+	bottom:.7em;
+}
+
+header > nav > ul {
+
+	display: flex;
+	list-style: none;
+	margin-left: 2em;
+}
+
+header > nav > ul > li {
+
+	text-align: right;
+	margin-left: 2em;
+}
+
+header > nav > ul > li > a {
+
+	text-decoration: none;
+	color: black;
+}
+
+header > nav > ul > li > a:hover {
+	
+	color: red;
+	cursor: pointer;
+}
+
+footer {
+
+	margin-top: auto;
+	background-color: rgb(133, 187, 53);
+	height: 4em;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	overflow: hidden;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	padding-top:1em;
+}
+
+footer > div {
+
+	margin: auto;
+	background-color: white;
+	width:85%;
+	padding: 1em;
+	height: 1em;
+}
+
+.call-me-img {
+
+	width: 2em;
+	height: 2em;
+	margin-left: 1em;
+	margin-right: 1em;
+	position: relative;
+	bottom: 1em;
+}
+
+.email-me-img {
+
+	width: 2.5em;
+	height: 2.5em;
+	margin-left: 1em;
+	margin-right: 1em;
+	position: relative;
+	bottom: .7em;
+}
+
+.copyright {
+
+	position: relative;
+	bottom: 1.5em;
+}
+
+.transaction-main-div {
+
+	background-color: white;
+	width: 60%;
+	min-height: 25em;
+	margin: auto;
+	border: 5px solid rgb(133, 187, 53);
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px #282c34;
+	padding-bottom: 1em;
+	margin-bottom: 8em;
+}
+
+.all-transaction-div {
+
+	padding-bottom: 2em;
+	margin-bottom: 8em;
+	overflow-x: scroll;
+}
+
+.all-transaction-div > h1 {
+
+	color: rgb(133, 187, 53);
+	margin-top: 1em;
+	margin-bottom: 1em; 
+}
+
+.message-div {
+
+	color: red;
+	height: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.transaction-form > h1 {
+
+	color: rgb(133, 187, 53);
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+input[ type=text ] {
+
+	width: 25em;
+	padding: .5em;
+	border-radius: 5px;
+	margin-bottom: 2em;
+}
+
+input[ type=date ] {
+
+	width: 15em;
+	padding: .5em;
+	border-radius: 5px;
+}
+
+input[ type=number ] {
+
+	margin-left: 2em;
+	width: 7em;
+	padding: .5em;
+	border-radius: 5px;
+}
+
+textarea {
+
+	width: 22.5em;
+	height: 7em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	border-radius: 5px;
+	resize: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: .9em;
+	padding: 1em;
+}
+
+.transaction-form > div > button {
+
+	border: none;
+	outline: none;
+	background-color: green;
+	border-radius: 5px;
+	box-shadow: 2px 1px 1px 1px black;
+	color: white;
+	font-size: 1em;
+	padding: 10px 15px 10px 15px;
+}
+
+.transaction-form > div > button:hover {
+
+	cursor: pointer;
+	color: green;
+	background-color: white;
+	border: 2px solid green ;
+}
+
+table {
+
+	margin: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	border-collapse: collapse;
+}
+
+table, th, td {
+
+	border: 1px solid;
+	padding: 10px;
+}
+
+.description-table {
+	max-width: 5em;
+	overflow-x: hidden;
+	overflow-wrap: break-word;
+}
+.price {
+
+	color: green;
+}
+
+.rewards {
+	color: orange;
+}
+
+.delete-btn {
+	outline: none;
+	border: none;
+	background-color: red;
+	color: white;
+	border-radius: 5px;
+	box-shadow: 2px 1px 1px 1px rgb(100, 100, 100);
+	padding: 7px 12px 7px 12px;;
+}
+
+.delete-btn:hover {
+	cursor: pointer;
+	color: red;
+	background-color: white;
+	border: 2px solid red;
+}
+
+.toggle3mths {
+	outline: none;
+	border: none;
+	background-color: green;
+	color: white;
+	border-radius: 5px;
+	box-shadow: 2px 1px 1px 1px rgb(100, 100, 100);
+	padding: 7px 12px 7px 12px;
+	margin-right: 0.7em;
+	margin-bottom: 1em;
+}
+
+.toggle3mths:hover {
+	cursor: pointer;
+	color: green;
+	background-color: white;
+	border: 2px solid green;
+}
+
+.no-transactions {
+	margin-top: 25%;
+	font-size: 2em;
+}
+
 .App {
-  text-align: center;
+	text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+@media(max-width :640px){  
+	.transaction-main-div {
+		width: 92%;
+	}	
+	.copyright {
+		margin-top: .5em;
+		display: block;
+	}
+	
+	footer {
+		height: 6em;
+	}
+	
+	footer > div {
+		height: 3.5em;
+	}
+	
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media(max-width :850px){  
+	.transaction-main-div {
+		width: 92%;
+	}	
+	header > nav > div {
+		width: 30%;
+	}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media(max-width :600px){  
+	.transaction-main-div {
+		width: 92%;
+	}	
+	header > nav > div {
+		width: 5%;
+	}
 }
 
-.App-link {
-  color: #61dafb;
+
+@media(max-width :450px){  
+
+header > nav {
+	width:87%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header > nav > div {
+	margin-left: 0;
+	width: unset;
+}
+
+header > nav > ul {
+	margin-left: 0;
+}
+
+header > nav > ul > li {
+	margin-left: .5em;
+}
+
+.transaction-main-div {
+	width: 92%;
+}
+
+input[ type=text ] {
+
+	width: 20em;
+}
+
+input[ type=date ] {
+
+	width: 9.5em;
+}
+input[ type=number ] {
+
+	margin-left: 2em;
+	width: 7em;
+	padding: .5em;
+	border-radius: 5px;
+}
+
+textarea {
+	width: 17.5em;
+}
+
+.copyright {
+	margin-top: .5em;
+	display: block;
+}
+
+footer {
+	height: 6em;
+}
+
+footer > div {
+	height: 3.5em;
+}
+
+.price-table {
+	min-width: 4em;
+}
+
+.toggle3mths {
+	margin-right: 0.7em;
+	margin-bottom: 1em;
+}
+
+}
+
+@media(min-width :384px){  
+	header > nav > ul {
+		margin-left: 2em;
+	}
 }

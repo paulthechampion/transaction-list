@@ -1,24 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AllTransactions from "./components/AllTransactions";
+import AddTransactions from "./components/AddTransactions";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import transactionList from "./assets/transactionList";
+
+export const TransactionContext = React.createContext();
 
 function App() {
+  const transactions = new transactionList()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+	<div className="App">
+	  <BrowserRouter>
+		<TransactionContext.Provider value={transactions}>
+			<div className="main-content">
+			
+				<Header/>
+				<Routes>
+					<Route exact path="/" element={<AddTransactions/>}/>
+					<Route exact path="/all-transactions" element={<AllTransactions/>}/>
+				</Routes>
+			</div>
+			<Footer/>
+		</TransactionContext.Provider>
+	  </BrowserRouter>
+	</div>
   );
 }
 
