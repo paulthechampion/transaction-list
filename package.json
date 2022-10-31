@@ -2,6 +2,9 @@
   "name": "transaction-list",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.16.0"
+  },
   "dependencies": {
     "express": "^4.18.2",
     "express-favicon": "^2.0.1",
