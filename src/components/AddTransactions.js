@@ -8,6 +8,8 @@ export default function AddTransactions() {
 	const transactionList = useContext(TransactionContext);
 	const oldTransactionList = JSON.parse(localStorage.getItem("transactionList"));
 	const todaysDate = new Date().toLocaleDateString()
+	const [ index, setIndex ]= useState(0);
+
 	if(message) {
 
 		setTimeout( () => {
@@ -25,9 +27,10 @@ export default function AddTransactions() {
 		e.preventDefault();
 		transactionList.addTransaction(transaction);
 		if (oldTransactionList) {
-
-			oldTransactionList.list.push(transactionList.list[0]);
+			
+			oldTransactionList.list.push(transactionList.list[index]);
 			localStorage.setItem("transactionList", JSON.stringify(oldTransactionList));
+			setIndex(index+1);
 			document.getElementById("transaction-form").reset();
 		}else {
 
